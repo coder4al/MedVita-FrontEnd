@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="logo ">
-                <h1> <img src="src\assets\MedVita_Logo.svg" width={50} height={50} alt="" />
+                <h1> <img src="\src\assets\MedVita_Logo.svg" width={50} height={50} alt="" />
                     MedVita</h1>
             </div>
             <nav className="nav">
