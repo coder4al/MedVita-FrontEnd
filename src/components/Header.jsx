@@ -1,14 +1,15 @@
 // Header.js
 import React from "react";
 import { Link } from "react-router-dom";
-import {MedVita_Logo} from "../assets/MedVita_Logo.svg";
+
 import "./Header.css"; // Import the CSS file for styling
 
 const Header = () => {
     return (
         <header className="header">
-            <div className="logo">
-                <h1><img src={MedVita_Logo} alt="" />MedVita</h1> 
+            <div className="logo ">
+                <h1> <img src="src\assets\MedVita_Logo.svg" width={50} height={50} alt="" />
+                    MedVita</h1>
             </div>
             <nav className="nav">
                 <ul>
