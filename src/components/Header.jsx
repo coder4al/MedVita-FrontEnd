@@ -1,7 +1,7 @@
 // Header.js
 import React from "react";
 import { Link } from "react-router-dom";
-import {MedVita_Logo} from "./assets/MedVita_Logo";
+import {MedVita_Logo} from "../assets/MedVita_Logo.svg";
 import "./Header.css"; // Import the CSS file for styling
 
 const Header = () => {
