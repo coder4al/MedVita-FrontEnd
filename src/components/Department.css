@@ -1,0 +1,23 @@
+/* Departments.css */
+.department {
+    padding: 2rem;
+    background-color: #f1f1f1;
+  }
+  
+  .department h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .department ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .department li {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+  }
+  
