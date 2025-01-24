@@ -1,53 +1,69 @@
-// Footer.js
 import React from "react";
-import "./Footer.css"; // Import the CSS file for styling
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-section">
-          <h3>SecureApp</h3> {/* Replace with your project name */}
-          <p>Your tagline or a brief description of the project goes here.</p>
+      <div className="footer-container">
+        {/* About Us Section */}
+        <div className="footer-about">
+          <h3>About MedVita</h3>
+          <p>
+            At MedVita Health Care, we are committed to delivering world-class healthcare services with compassion and innovation. 
+            With a team of highly skilled professionals, we ensure the well-being of every patient is our top priority.
+          </p>
         </div>
-        <div className="footer-section">
-          <h4>Quick Links</h4>
+
+        {/* Quick Links Section */}
+        <div className="footer-links">
+          <h3>Quick Links</h3>
           <ul>
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#departments">Departments</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#contact us">Contact Us</a>
-            </li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#departments">Departments</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#careers">Careers</a></li>
           </ul>
         </div>
-        <div className="footer-section">
-          <h4>Follow Us</h4>
+
+        {/* Social Media Section */}
+        <div className="footer-social">
+          <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              Twitter
+            <a href="#" aria-label="Facebook">
+              <i className="fab fa-facebook"></i>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              Facebook
+            <a href="#" aria-label="Twitter">
+              <i className="fab fa-twitter"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              LinkedIn
+            <a href="#" aria-label="Instagram">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <i className="fab fa-linkedin"></i>
             </a>
           </div>
         </div>
+
+        {/* Newsletter Subscription Section */}
+        <div className="footer-newsletter">
+          <h3>Stay Connected</h3>
+          <p>Subscribe to our newsletter to receive health tips, updates, and exclusive offers.</p>
+          <form className="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" className="btn-subscribe">Subscribe</button>
+          </form>
+        </div>
       </div>
+
+      {/* Copyright Section */}
       <div className="footer-bottom">
-        <p>&copy; 2025 SecureApp. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} MedVita Health Care. All rights reserved.</p>
       </div>
     </footer>
   );
 };
 
 export default Footer;
+
 
