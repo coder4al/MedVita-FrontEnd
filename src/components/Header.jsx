@@ -1,20 +1,21 @@
 // Header.js
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/MedVita_Logo.svg"
+import LogoL from "./Logo_Light";
 import "./Header.css"; // Import the CSS file for styling
 
 const Header = () => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+    
     return (
         <header className="header">
-            <div className="logo ">
-                <h1> <img src={logo} width={50} height={50} alt="" />
-                    MedVita</h1>
-            </div>
+            <LogoL />
             <nav className="nav">
                 <ul>
-                    <li>
-                        <a href="#home">Home</a>
+                    <li  onClick={scrollToTop} style={{cursor: "pointer"}}>
+                       Home
                     </li>
                     <li>
                         <a href="#departments">Departments</a>
@@ -26,7 +27,7 @@ const Header = () => {
                         <a href="#contact-us">Contact Us</a>
                     </li>
                     <li>
-                        <Link to="/login-register" className="btn-primary">
+                        <Link to="/login" className="btn-primary">
                             Login/Register
                         </Link>
                     </li>

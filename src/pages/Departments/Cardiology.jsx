@@ -1,8 +1,11 @@
 import React from 'react'
+import "./DepartmentPage.css";
 
 const Cardiology = () => {
   return (
-    <div>Cardiology</div>
+  <div className="department-page">
+    a;lskdjf
+  </div>
   )
 }
 

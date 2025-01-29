@@ -1,9 +1,11 @@
 import React from 'react'
+import "./DepartmentPage.css";
 
 const Dermatology = () => {
   return (
-    <div>Dermatology</div>
-  )
+<div className="department-page">
+    a;lskdjf
+  </div>  )
 }
 
 export default Dermatology

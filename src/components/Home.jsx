@@ -5,30 +5,10 @@ import Contact from './Contact';
 import Department from './Department';
 import { Link } from "react-router-dom";
 import GenDept from "../assets/GenDept.png";
-import CardioDept from "../assets/CardioDept.png";
-import NeuroDept from "../assets/NeuroDept.png";
-import OrthoDept from "../assets/OrthoDept.png";
-import ENTDept from "../assets/ENTDept.png";
-import UrologyDept from "../assets/UrologyDept.png";
-import GasteroDept from "../assets/GasteroDept.png";
-import PulmoDept from "../assets/PulmoDept.png";
-import EyeDept from "../assets/EyeDept.png";
-import DermatologyDept from "../assets/DermatologyDept.png";
-import DentDept from "../assets/DentDept.png";
+import { useDeparts } from "../context/DepartmentProvider";
 
 const Home = () => {
-  const images = [
-    { id: 1, src: CardioDept, alt: "Card 1" },
-    { id: 2, src: NeuroDept, alt: "Card 2" },
-    { id: 3, src: OrthoDept, alt: "Card 3" },
-    { id: 4, src: ENTDept, alt: "Card 4" },
-    { id: 5, src: UrologyDept, alt: "Card 5" },
-    { id: 6, src: GasteroDept, alt: "Card 6" },
-    { id: 7, src: PulmoDept, alt: "Card 7" },
-    { id: 8, src: EyeDept, alt: "Card 8" },
-    { id: 9, src: DermatologyDept, alt: "Card 9" },
-    { id: 10, src: DentDept, alt: "Card 10" },
-  ];
+  const departs = useDeparts();
   return (
     <>
       <div className="home" id="home">
@@ -57,12 +37,16 @@ const Home = () => {
           <h2>Our Facilities</h2>
           <div className="carousel">
             <div className="carousel-track">
-              {images.map((image) => (
-                <img key={image.id} src={image.src} alt={image.alt} />
+              {departs.map((dept, index) => (
+                <div key={index} className="cardScroll">
+                  <img src={dept.image} alt="Card" />
+                </div>
               ))}
               {/* Duplicate the images for seamless circular animation */}
-              {images.map((image) => (
-                <img key={`duplicate-${image.id}`} src={image.src} alt={image.alt} />
+              {departs.map((dept, index) => (
+                <div key={`duplicate-${index}`} className="cardScroll">
+                  <img src={dept.image} alt="Card" />
+                </div>
               ))}
             </div>
           </div>
@@ -93,13 +77,14 @@ const Home = () => {
           </div>
         </section>
         <Department />
-      <About />
-      <Contact />
+        <About />
+        <Contact />
       </div>
-    
+
     </>
   );
 };
+
 
 export default Home;
 

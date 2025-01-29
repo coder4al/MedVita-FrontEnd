@@ -1,6 +1,7 @@
 // LoginRegister.js
 import React, { useState } from "react";
 import "./LoginRegister.css";
+import LogoD from "../components/Logo_Dark";
 
 const LoginRegister = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -12,6 +13,9 @@ const LoginRegister = () => {
   return (
     <div className="login-register">
       <div className="form-container">
+        <div className="logo">
+          <LogoD />
+        </div>
         <h2>{isLogin ? "Login" : "Register"}</h2>
         {isLogin ? (
           <form>

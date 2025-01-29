@@ -1,9 +1,11 @@
 import React from 'react'
+import "./DepartmentPage.css";
 
 const Gastroenterology = () => {
   return (
-    <div>Gastroenterology</div>
-  )
+<div className="department-page">
+    a;lskdjf
+  </div>  )
 }
 
 export default Gastroenterology

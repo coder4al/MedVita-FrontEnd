@@ -1,9 +1,11 @@
 import React from 'react'
+import "./DepartmentPage.css";
 
 const Neurology = () => {
   return (
-    <div>Neurology</div>
-  )
+<div className="department-page">
+    a;lskdjf
+  </div>  )
 }
 
 export default Neurology
