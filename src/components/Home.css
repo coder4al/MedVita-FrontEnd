@@ -11,6 +11,8 @@
     justify-content: space-between;
     padding: 40px 20px;
     background-color: #f4f4f4;
+    text-align: center;
+    flex-direction: column;
 }
 
 .welcome-content {
@@ -58,6 +60,12 @@
 
 .home-buttons .btn-secondary:hover {
     background-color: #217dbb;
+}
+
+@media (min-width: 768px) {
+    .welcome-section {
+        flex-direction: row;
+    }
 }
 
 
