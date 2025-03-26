@@ -1,9 +1,10 @@
-import './App.css'
 import { Routes, Route, useLocation } from "react-router-dom";
+import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Home from './components/Home'
-import LoginRegister from "./pages/LoginRegister";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Cardiology from './pages/Departments/Cardiology';
 import Neurology from './pages/Departments/Neurology';
 import Orthopedic from './pages/Departments/Orthopedic';
@@ -17,14 +18,15 @@ import Dental from './pages/Departments/Dental';
 
 function App() {
   const {pathname} = useLocation();
-  const navHidePath = ["/login"];
+  const navHidePath = ["/login", "/register"];
   const hideNavBar = navHidePath.includes(pathname);
   return (
     <>
       {!hideNavBar && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LoginRegister />} />
+        <Route path="/login" element={<Login />} />
+        <Route path='/register' element={<Register />} />
         <Route path="/department/cardiology" element={<Cardiology />} />
         <Route path="/department/neurology" element={<Neurology />} />
         <Route path="/department/orthopedic" element={<Orthopedic />} />
