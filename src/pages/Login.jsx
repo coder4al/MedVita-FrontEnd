@@ -45,12 +45,12 @@ function Login() {
 
     return (
         <div className="login-register">
-            <div className="form-container" onSubmit={handleSubmit}>
+            <div className="form-container">
                 <div className="logo">
                     <LogoD />
                 </div>
                 <h2>Login</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label>Email:</label>
                     <input
                         type="email"

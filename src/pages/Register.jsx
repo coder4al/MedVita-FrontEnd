@@ -41,12 +41,12 @@ function Register() {
     };
     return (
         <div className="login-register">
-            <div className="form-container" onSubmit={handleSubmit}>
+            <div className="form-container">
                 <div className="logo">
                     <LogoD />
                 </div>
                 <h2>Register</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label>Full Name:</label>
                     <input
                         type="text"
